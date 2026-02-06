@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For You ❤️</title>
+<style>
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+  text-align: center;
+}
+
+.container {
+  background: rgba(0,0,0,0.3);
+  padding: 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 350px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: #ff4d6d;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ff1e4d;
+}
+
+img {
+  width: 200px;
+  border-radius: 15px;
+  margin-top: 15px;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <div id="step1">
+    <h2>Hey Nandu ❤️</h2>
+    <p>I made something just for you…</p>
+    <button onclick="nextStep(2)">Open Gift 🎁</button>
+  </div>
+
+  <div id="step2" class="hidden">
+    <p>Before going ahead…</p>
+    <h3>Do you love me? 🥺</h3>
+    <button onclick="nextStep(3)">YES 💖</button>
+  </div>
+
+  <div id="step3" class="hidden">
+    <h2>I Love You Baby ❤️</h2>
+    <p>
+      I can’t live without you Nandu.<br>
+      You are my happiness, my peace, my everything.
+    </p>
+
+    <!-- 👉 YAHAN PHOTO LAGANI HAI -->
+    <img src="gf.jpg" alt="My Love">
+
+    <p style="margin-top:15px;">
+      Thank you for coming into my life 🌸<br>
+      Happy Birthday 🎂❤️
+    </p>
+  </div>
+</div>
+
+<script>
+function nextStep(step) {
+  document.getElementById("step1").classList.add("hidden");
+  document.getElementById("step2").classList.add("hidden");
+  document.getElementById("step3").classList.add("hidden");
+
+  document.getElementById("step" + step).classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
